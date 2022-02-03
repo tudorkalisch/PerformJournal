@@ -9,14 +9,13 @@ class EmployeeService {
         { id: 5, firstName: 'Jay', lastName: 'Bilzerian', email: 'jay.bilzerian@test.com', role: 'User' }
     ]
 
-    static instance = axios.create({
+    instance = axios.create({
         baseURL: `http://localhost:9010/pj-service/employee/`,
         timeout: 1000,
         headers: { 'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("token")).accessToken }
     })
 
     static getAllEmployees = async () => {
-        console.log(JSON.parse(localStorage.getItem("token")).accessToken)
         return this.instance.get('all')
             .then(res => {
                 if (res == undefined) {

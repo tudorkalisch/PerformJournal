@@ -5,18 +5,17 @@ import { defaultTheme, Provider } from "@adobe/react-spectrum";
 import { Login } from "../login/Login";
 import Home from "../home/Home";
 import useToken from "./useToken";
-import EmployeeReview from "../employee_review/EmployeeReview";
 
 export const App = () => {
   const { token, setToken } = useToken();
 
-  if (!token) {
-    return (
-      <Provider theme={defaultTheme} height="100%">
-        <Login setToken={setToken} />
-      </Provider>
-    );
-  }
+  // if (!token) {
+  //   return (
+  //     <Provider theme={defaultTheme} height="100%">
+  //       <Login setToken={setToken} />
+  //     </Provider>
+  //   );
+  // }
 
   return (
     <Provider theme={defaultTheme} height="100%">
