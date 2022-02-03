@@ -1,0 +1,12 @@
+# dependencies
+.npm
+node_modules
+
+# build
+dist
+
+# test
+coverage
+
+# misc
+.env

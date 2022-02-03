@@ -1,0 +1,12 @@
+.container {
+  margin: 100px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__button {
+    height: 80px;
+  }
+}

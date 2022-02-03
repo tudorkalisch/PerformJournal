@@ -1,0 +1,52 @@
+{
+  "name": "perform-journal-ui",
+  "version": "1.0.0",
+  "description": "A web app to track performance reviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "lint:fix": "eslint --fix src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://radup-ensemble@bitbucket.org/radup-ensemble/perform-journal-ui.git"
+  },
+  "keywords": [
+    "perform",
+    "reviews"
+  ],
+  "author": "Ensemble Software",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/radup-ensemble/perform-journal-ui#readme",
+  "dependencies": {
+    "@adobe/react-spectrum": "^3.15.1",
+    "@babel/runtime": "^7.16.7",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.4.0",
+    "axios": "^0.24.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-list-select": "^0.4.1",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-react": "^7.16.7",
+    "@parcel/transformer-sass": "^2.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "parcel": "^2.2.1",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.5.1"
+  }
+}
