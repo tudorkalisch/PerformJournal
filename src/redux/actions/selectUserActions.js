@@ -1,17 +1,16 @@
 import * as actionTypes from "../constants/selectedUserConstants";
 
 export const addSelectedEmployee =
-  (id, firstName, lastName) => async (dispatch, getState) => {
+  (firstName, lastName) => async (dispatch, getState) => {
     dispatch({
       type: actionTypes.ADD_SELECTED_EMPLOYEE,
       payload: {
-        id: id,
         firstName: firstName,
         lastName: lastName,
       },
     });
     localStorage.setItem(
-      "selectedUser",
+      "selectedEmployee",
       JSON.stringify(getState().selectedEmployee)
     );
   };
@@ -26,5 +25,5 @@ export const removeSelectedEmployee = () => (dispatch, getState) => {
     },
   });
 
-  localStorage.setItem("user", JSON.stringify(getState().selectedEmployee));
+  localStorage.setItem("selectedEmployee", JSON.stringify(getState().selectedEmployee));
 };

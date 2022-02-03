@@ -54,28 +54,30 @@ import "./EmployeeSelector.scss";
 // }
 
 const EmployeeSelector = (props) => {
-  const [selectedEmployee, setSelectedEmployee] =
-    useState("Select an Employee");
+  const [selectedEmployee, setSelectedEmployee] = useState("");
   console.log(selectedEmployee);
 
   const dispatch = useDispatch();
+
+  const onEmployeeChangeHandler = (e) => {
+    setSelectedEmployee(e.target.value);
+  };
 
   const findSelectedEmployee = employees.find(
     (employee) =>
       employee.firstName + " " + employee.lastName === selectedEmployee
   );
 
-  const onEmployeeChangeHandler = (e) => {
-    setSelectedEmployee(e.target.value);
-    dispatch(
-      addSelectedEmployee(
-        findSelectedEmployee.id,
-        findSelectedEmployee.firstName,
-        findSelectedEmployee.lastName
-      )
-    );
+  const setEmployeeHandler = () => {
+    if (findSelectedEmployee) {
+      dispatch(
+        addSelectedEmployee(
+          findSelectedEmployee.firstName,
+          findSelectedEmployee.lastName
+        )
+      );
+    }
   };
-  console.log("findSelectedEmployee", findSelectedEmployee);
   return (
     <div>
       <h4>Search employee</h4>
@@ -93,6 +95,7 @@ const EmployeeSelector = (props) => {
           </option>
         ))}
       </select>
+      <button onClick={setEmployeeHandler}>Set employee</button>
     </div>
   );
 };
