@@ -3,10 +3,12 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { userReducer } from "./reducers/selectUserReducer";
+import { subcategoriesGradesReducer } from "./reducers/subcategoriesGradeReducer";
 
 
 const reducer = combineReducers({
   selectedEmployee: userReducer,
+  subcategoriesGrades: subcategoriesGradesReducer,
 });
 
 const middleware = [thunk];
