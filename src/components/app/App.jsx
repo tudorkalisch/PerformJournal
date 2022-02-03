@@ -23,7 +23,6 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login setToken={setToken} />} />
-          <Route path="/review" element={<EmployeeReview />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
