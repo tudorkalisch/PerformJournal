@@ -1,9 +1,25 @@
 import React, { Component } from "react";
 
-const EmployeeReview = (props) => {
-  {
-    return <div className="container"></div>;
+class EmployeeReview extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+     
+    };
   }
-};
+
+  componentDidMount() {
+
+  }
+
+  render() {
+    return (
+      <div className="container">
+        
+      </div>
+    );
+  }
+}
 
 export default EmployeeReview;
