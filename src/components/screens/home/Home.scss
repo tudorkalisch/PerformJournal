@@ -1,12 +1,19 @@
-.container {
-  margin: 100px;
-}
 .navbar {
   display: flex;
   flex-direction: row;
+  background: #8C8C9C;
   justify-content: space-between;
 
-  &__button {
+  &__button,[type="button"] {
     height: 80px;
+    color:#BBB6A5;
   }
+}
+
+.main {
+  text-decoration-color: #2A2F33;
+  background: white;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
 }

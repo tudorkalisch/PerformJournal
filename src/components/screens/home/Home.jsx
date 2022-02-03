@@ -26,8 +26,12 @@ const Home = () => {
       <div className="navbar">
         <h1>Home</h1>
         <Button className="navbar__button">Logout</Button>
-        <EmployeeSelector />
-        <Button onClick={onSelectingEmployeeHandler}>Next</Button>
+      </div>
+      <div className="main">
+        <div className="container">
+          <EmployeeSelector />
+          <Button className="container__btn" type="button" onClick={onSelectingEmployeeHandler}>Next</Button>
+        </div>
       </div>
     </React.Fragment>
   );
