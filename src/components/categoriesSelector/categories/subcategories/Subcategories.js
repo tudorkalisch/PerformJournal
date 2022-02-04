@@ -11,12 +11,14 @@ const Subcategories = (props) => {
   const gradeChangeHandler = (e) => {
     setSelectedGrade(e.target.value);
     dispatch(
-      addSubCategoriesGrades(props.subcategory.subcategoryName, e.target.value)
+      addSubCategoriesGrades(
+        props.categoryName,
+        props.subcategory.subcategoryName,
+        e.target.value
+      )
     );
     console.log(selectedGrade);
   };
-
-  
   return (
     <div key={props.subcategory.id}>
       <li>{props.subcategory.subcategoryName}</li>
