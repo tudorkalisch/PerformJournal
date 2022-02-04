@@ -9,7 +9,7 @@ const Categories = (props) => {
       <h2>{props.categoryHeading}</h2>
       <ol>
         {props.subcategories.map((subcategory) => (
-          <Subcategories subcategory={subcategory} />
+          <Subcategories categoryName={props.categoryHeading} subcategory={subcategory} />
         ))}
       </ol>
     </React.Fragment>
